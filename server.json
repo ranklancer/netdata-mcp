@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ranklancer/netdata-mcp",
+  "title": "Netdata MCP Server",
+  "description": "MCP server for Netdata monitoring — system info, alarms, charts, and metrics for AI assistants",
+  "repository": {
+    "url": "https://github.com/ranklancer/netdata-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ranklancer/netdata-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "NETDATA_URL",
+          "description": "Netdata API base URL (e.g. 'http://localhost:19999')",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
