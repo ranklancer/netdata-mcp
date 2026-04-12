@@ -1,16 +1,24 @@
 {
   "name": "@ranklancer/netdata-mcp",
   "version": "1.0.0",
-  "description": "MCP server for Netdata monitoring — system info, alarms, charts, and metrics",
+  "description": "MCP server for Netdata monitoring — system info, alarms, charts, and metrics for AI assistants",
+  "mcpName": "io.github.ranklancer/netdata-mcp",
+  "private": false,
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
     "netdata-mcp": "dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ranklancer/netdata-mcp.git"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc && node dist/index.js"
+    "dev": "tsc && node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0"
@@ -21,5 +29,21 @@
   },
   "engines": {
     "node": ">=22.0.0"
-  }
+  },
+  "keywords": [
+    "netdata",
+    "monitoring",
+    "metrics",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "system-monitoring",
+    "alarms",
+    "health-check",
+    "homelab",
+    "self-hosted",
+    "docker",
+    "claude",
+    "ai-tools"
+  ]
 }
